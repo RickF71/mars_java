@@ -3,7 +3,7 @@ package com.training.mars;
 public class Person {
 	private int height;  // instance variable
 	private int weight;// instance variable
-	
+
 	public int getHeight() {
 		return height;
 	}

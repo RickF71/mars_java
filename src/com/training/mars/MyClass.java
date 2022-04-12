@@ -16,7 +16,7 @@ public class MyClass {
 		
 		int charValue = 'A';
 		
-		System.out.println("charValue A is " + charValue);
+		System.out.println("charValue A is " + charValue); // since created type int, shows 65 instead of A
 		
 		Person p1 = new Person();
 		p1.setHeight(170);
