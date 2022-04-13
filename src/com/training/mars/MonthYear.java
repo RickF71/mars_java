@@ -13,7 +13,7 @@ public class MonthYear {
 		int year = scanner.nextInt();
 		
 		// This entire switch, as it stands, could utilize an array of months
-		//   to make it much simpler code
+		//   to make it simpler code
 		switch (month) {
 		case 1:
 			System.out.println("January " + year + " has 31 days."); 
