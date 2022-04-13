@@ -5,11 +5,15 @@ import java.util.Scanner;
 public class MonthYear {
 	public static void main (String args[]) {
 		Scanner scanner = new Scanner(System.in);
+		
+		// These entry items should have checks for valid replies 
 		System.out.println("Enter Month Number");
 		int month = scanner.nextInt();
 		System.out.println("Enter Year Number");
 		int year = scanner.nextInt();
 		
+		// This entire switch, as it stands, could utilize an array of months
+		//   to make it much simpler code
 		switch (month) {
 		case 1:
 			System.out.println("January " + year + " has 31 days."); 
@@ -53,6 +57,7 @@ public class MonthYear {
 			break;
 
 		}
+		scanner.close();
 		System.out.println();
 	}
 }
