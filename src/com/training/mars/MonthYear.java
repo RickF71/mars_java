@@ -1,6 +1,7 @@
 package com.training.mars;
-
 import java.util.Scanner;
+import java.time.YearMonth;
+import java.time.format.DateTimeFormatter;
 
 public class MonthYear {
 	public static void main (String args[]) {
@@ -12,6 +13,12 @@ public class MonthYear {
 		System.out.println("Enter Year Number");
 		int year = scanner.nextInt();
 		
+		// simple way using java.time libraries 
+		YearMonth yearMonthObject = YearMonth.of(year, month); 
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM yyyy");
+	    System.out.println(formatter.format(yearMonthObject) + " has " + yearMonthObject.lengthOfMonth() + " days."); 
+		
+		
 		// This entire switch, as it stands, could utilize an array of months
 		//   to make it simpler code
 		switch (month) {
@@ -20,7 +27,17 @@ public class MonthYear {
 			break;
 		case 2:
 			if ((year % 4)==0) {
-				System.out.println("February " + year + " has 29 days.");
+				if ((year % 100)==0) {
+					if ((year % 400)==0 ) {
+						// leap year
+						System.out.println("February " + year + " has 29 days.");
+					} else {
+						// not leap year
+						System.out.println("February " + year + " has 28 days.");
+					}
+				} else {
+					System.out.println("February " + year + " has 29 days.");
+				}
 			} else {
 				System.out.println("February " + year + " has 28 days."); 
 			}
