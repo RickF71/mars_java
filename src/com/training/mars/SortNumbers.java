@@ -6,9 +6,12 @@ public class SortNumbers {
         SortNumbers ob = new SortNumbers();
         Scanner scanner = new Scanner(System.in);
         // int nbr[] = { 64, 24, 25, 10, 22, 11 };
-        int[] nbr = new int[5];
+        System.out.println("How many numbers do you want to sort?");
+    	int numints = scanner.nextInt();
+        int[] nbr = new int[numints];
         
-        for (var i=0; i <= 4; i++) {
+        // Get the array of numbers we want
+       for (var i=0; i <= numints-1; i++) {
         	System.out.println("Enter number:");
         	nbr[i] = scanner.nextInt();
         };
